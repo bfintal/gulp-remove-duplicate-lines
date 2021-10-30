@@ -1,0 +1,33 @@
+{
+  "name": "gulp-remove-duplicate-lines",
+  "version": "1.0.0",
+  "description": "Gulp plugin that removes all duplicate lines in a file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfintal/gulp-remove-duplicate-lines.git"
+  },
+  "keywords": [
+    "gulp",
+    "delete",
+    "remove",
+    "duplicate",
+    "line",
+    "filter"
+  ],
+  "author": "Benjamin Intal",
+  "email": "bfintal@gmail.com",
+  "url": "https://benjaminintal.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bfintal/gulp-remove-duplicate-lines/issues"
+  },
+  "homepage": "https://github.com/bfintal/gulp-remove-duplicate-lines#readme",
+  "dependencies": {
+    "plugin-error": "^1.0.1",
+    "through2": "^4.0.2"
+  }
+}
