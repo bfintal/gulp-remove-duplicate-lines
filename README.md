@@ -58,3 +58,90 @@ six
     include: /^\w/g,
 } ) )
 ```
+
+### Examples
+
+#### Remove duplicate lines, but exclude lines that start with uppercase letters
+
+```js
+.pipe( removeDuplicateLines( {
+    // Exclude lines that start with uppercase letters.
+    exclude: /^[A-Z]/g, 
+} ) )
+```
+
+```
+Input:
+one
+two
+Three
+Three
+four
+four
+
+Output:
+one
+two
+Three
+Three
+four
+```
+
+#### Remove duplicate lines, but only on lines that start with a letter
+
+```js
+.pipe( removeDuplicateLines( {
+    // Include only lines that start with a letter
+    include: /^\w/g,
+} ) )
+```
+
+```
+Input:
+1
+2
+three
+three
+4
+4
+
+Output:
+1
+2
+three
+4
+4
+```
+
+#### Remove duplicate lines, but only on lines that start with a letter, and exclude lines that start with uppercase letters
+
+Technically, you can use just one regex to achieve this example, but this shows you can use both `exclude` and `include` at the same time.
+
+```js
+.pipe( removeDuplicateLines( {
+    // Exclude lines that start with uppercase letters.
+    exclude: /^[A-Z]/g, 
+    // Include only lines that start with a letter
+    include: /^\w/g,
+} ) )
+```
+
+```
+Input:
+1
+1
+two
+Three
+Three
+four
+four
+two
+
+Output:
+1
+1
+two
+Three
+Three
+four
+```
